@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agronova — Fibra de Coco Premium | Sustrato Profesional Buenos Aires</title>
+<meta name="description" content="Agronova: fibra de coco premium en Buenos Aires. Sustrato profesional lavado y bufferizado, origen Sri Lanka. Ideal para grow shops, viveros, horticultura y cultivos intensivos. CABA.">
+<meta name="keywords" content="fibra de coco Buenos Aires, sustrato cultivos Argentina, coco premium CABA, sustrato grow shop, vivero fibra coco, horticultura sustrato profesional">
+<meta property="og:title" content="Agronova — Fibra de Coco Premium">
+<meta property="og:description" content="Sustrato profesional lavado y bufferizado. Origen Sri Lanka con certificaciones. CABA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --g:#C9A227;--gl:#e4bb45;--gd:#9a7918;--gm:rgba(201,162,39,.12);
+  --bl:#060606;--b2:#0d0d0d;--b3:#141414;--b4:#1a1a1a;
+  --cr:#F5F1E8;--mu:#7a7870;--mu2:#3e3e3b;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--bl);color:var(--cr);font-family:'DM Sans',sans-serif;cursor:none;overflow-x:hidden;}
+
+/* CURSOR */
+#cd{position:fixed;width:6px;height:6px;background:var(--g);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:opacity .2s;}
+#cr{position:fixed;width:32px;height:32px;border:1px solid rgba(201,162,39,.35);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .25s,height .25s,border-color .25s;}
+#cr.h{width:50px;height:50px;border-color:rgba(201,162,39,.75);}
+body:not(:hover) #cd,body:not(:hover) #cr{opacity:0;}
+
+/* PROGRESS */
+#prog{position:fixed;top:0;left:0;height:1px;background:linear-gradient(90deg,var(--gd),var(--g),var(--gl));z-index:1001;width:0%;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.8rem 5rem;transition:all .45s;}
+nav.on{background:rgba(6,6,6,.95);backdrop-filter:blur(20px);padding:1rem 5rem;border-bottom:1px solid rgba(201,162,39,.08);}
+.nl{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:var(--cr);text-decoration:none;letter-spacing:-.3px;}
+.nl em{color:var(--g);font-style:normal;}
+.nm{display:flex;gap:2.5rem;list-style:none;align-items:center;}
+.nm a{font-size:.75rem;font-weight:400;letter-spacing:.9px;color:var(--mu);text-decoration:none;text-transform:uppercase;transition:color .2s;}
+.nm a:hover{color:var(--g);}
+.nwa{background:var(--g) !important;color:var(--bl) !important;padding:.52rem 1.35rem !important;border-radius:1px;font-weight:500 !important;letter-spacing:.3px !important;text-transform:none !important;font-size:.82rem !important;transition:background .2s,transform .15s !important;}
+.nwa:hover{background:var(--gl) !important;transform:translateY(-1px);}
+.nhb{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.4rem;}
+.nhb span{display:block;width:22px;height:1px;background:var(--cr);transition:all .3s;}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:radial-gradient(ellipse at 70% 50%,rgba(201,162,39,.04) 0%,transparent 60%);}
+#pcanvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+.hc{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1300px;margin:0 auto;padding:0 5rem;gap:4rem;}
+.ht{flex:1;max-width:560px;}
+.hey{font-size:.65rem;font-weight:500;letter-spacing:5px;color:var(--g);text-transform:uppercase;margin-bottom:2rem;display:flex;align-items:center;gap:.8rem;opacity:0;animation:fadeUp .7s .2s forwards;}
+.hey::before{content:'';display:block;width:32px;height:1px;background:var(--g);}
+h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,5.2vw,5.6rem);font-weight:900;line-height:1.05;letter-spacing:-1.5px;margin-bottom:1.8rem;opacity:0;animation:fadeUp .8s .35s forwards;}
+h1 em{font-style:italic;color:var(--g);display:block;}
+.hsub{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:300;color:var(--mu);line-height:1.85;margin-bottom:3rem;letter-spacing:.2px;opacity:0;animation:fadeUp .8s .5s forwards;}
+.hbtns{display:flex;gap:1rem;flex-wrap:wrap;opacity:0;animation:fadeUp .8s .65s forwards;}
+.hbadge{display:flex;gap:1.6rem;margin-top:3rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,.05);opacity:0;animation:fadeUp .8s .8s forwards;}
+.hbd{text-align:center;}
+.hbv{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--g);display:block;line-height:1;}
+.hbl{font-size:.6rem;letter-spacing:1.5px;color:var(--mu);text-transform:uppercase;margin-top:.25rem;display:block;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:none;}}
+
+/* BTN */
+.btn-g{display:inline-flex;align-items:center;gap:.5rem;background:var(--g);color:var(--bl);padding:.9rem 2.2rem;font-size:.85rem;font-weight:500;text-decoration:none;border-radius:1px;letter-spacing:.4px;transition:background .2s,transform .15s,box-shadow .2s;}
+.btn-g:hover{background:var(--gl);transform:translateY(-2px);box-shadow:0 12px 30px rgba(201,162,39,.3);}
+.btn-o{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(201,162,39,.25);color:var(--cr);padding:.9rem 2.2rem;font-size:.85rem;font-weight:300;text-decoration:none;border-radius:1px;letter-spacing:.4px;transition:border-color .2s,color .2s,transform .15s;}
+.btn-o:hover{border-color:var(--g);color:var(--g);transform:translateY(-2px);}
+
+/* BAG 3D */
+.bw{flex:0 0 auto;width:380px;perspective:1000px;display:flex;align-items:center;justify-content:center;opacity:0;animation:fadeUp .9s .4s forwards;}
+.b3d{width:265px;height:405px;transform-style:preserve-3d;transition:transform .08s ease-out;position:relative;filter:drop-shadow(0 40px 80px rgba(0,0,0,.9));}
+.bb{width:100%;height:100%;border-radius:14px;background:linear-gradient(165deg,#1c1c1c 0%,#0f0f0f 50%,#080808 100%);position:relative;overflow:hidden;border:1px solid #1e1e1e;}
+.btop{position:absolute;top:0;left:0;right:0;height:125px;background:linear-gradient(175deg,#F5F1E8,#EAE4D8);border-radius:14px 14px 0 0;}
+.bla{position:absolute;top:24px;left:0;right:0;display:flex;flex-direction:column;align-items:center;z-index:3;}
+.blt{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:#1a1208;letter-spacing:.5px;position:relative;display:flex;align-items:center;gap:6px;}
+.bleaf{width:13px;height:8px;background:#4CAF50;border-radius:50% 0 50% 0;transform:rotate(-15deg);}
+.bsub{font-size:.42rem;letter-spacing:3.5px;color:#999;text-transform:uppercase;margin-top:4px;}
+.bprem{position:absolute;top:138px;left:0;right:0;text-align:center;z-index:3;font-family:'Playfair Display',serif;font-size:2.45rem;font-weight:900;color:var(--g);letter-spacing:.5px;text-shadow:0 0 40px rgba(201,162,39,.15);}
+.bbar{position:absolute;top:194px;left:14px;right:14px;height:21px;background:var(--g);z-index:3;display:flex;align-items:center;justify-content:center;}
+.bbar span{font-size:.42rem;letter-spacing:3px;font-weight:700;color:#0a0a0a;text-transform:uppercase;}
+.bspecs{position:absolute;top:228px;left:0;right:0;display:flex;justify-content:space-around;z-index:3;padding:0 8px;}
+.bspec{text-align:center;}
+.bsl{font-size:.33rem;color:#555;letter-spacing:1px;display:block;text-transform:uppercase;}
+.bsv{font-size:.55rem;font-weight:700;color:var(--g);display:block;margin-top:2px;}
+.bdiag{position:absolute;width:190%;height:42px;background:var(--g);top:62%;left:-45%;transform:rotate(-8deg);z-index:4;opacity:.95;}
+.blit{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:5;border:2px solid var(--g);border-radius:5px;width:92px;height:54px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(0,0,0,.3);}
+.bln{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:900;color:var(--cr);line-height:1;}
+.bll{font-size:.36rem;letter-spacing:3px;color:var(--mu);text-transform:uppercase;margin-top:2px;}
+.bglow{position:absolute;inset:-40px;background:radial-gradient(ellipse at 50% 40%,rgba(201,162,39,.09) 0%,transparent 60%);pointer-events:none;z-index:0;}
+
+/* TICKER */
+.ticker{background:var(--g);padding:.7rem 0;overflow:hidden;white-space:nowrap;}
+.tinner{display:inline-flex;gap:0;animation:tick 22s linear infinite;}
+.titem{font-size:.65rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--bl);padding:0 2.5rem;}
+.titem::after{content:'·';margin-left:2.5rem;}
+@keyframes tick{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* STATS */
+.stbar{padding:4rem 5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(201,162,39,.06);border-bottom:1px solid rgba(201,162,39,.06);}
+.st{text-align:center;padding:1.5rem;position:relative;}
+.st:not(:last-child)::after{content:'';position:absolute;right:0;top:20%;bottom:20%;width:1px;background:rgba(201,162,39,.08);}
+.stn{font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;color:var(--g);display:block;line-height:1;}
+.stl{font-size:.65rem;font-weight:400;color:var(--mu);letter-spacing:1.5px;text-transform:uppercase;margin-top:.5rem;display:block;}
+
+/* SECTION */
+.sec{padding:8rem 5rem;max-width:1300px;margin:0 auto;}
+.ey{font-size:.6rem;font-weight:500;letter-spacing:5px;color:var(--g);text-transform:uppercase;margin-bottom:1.2rem;display:flex;align-items:center;gap:.7rem;}
+.ey::before{content:'';width:26px;height:1px;background:var(--g);}
+h2{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,3.8vw,3.4rem);font-weight:700;line-height:1.12;letter-spacing:-.5px;margin-bottom:.8rem;}
+h2 em{color:var(--g);font-style:italic;}
+.sub{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:300;color:var(--mu);line-height:1.8;max-width:520px;margin-bottom:4rem;letter-spacing:.2px;}
+
+/* BENEFICIOS */
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,162,39,.05);}
+.bcard{background:var(--b2);padding:3rem 2.5rem;transition:background .3s,transform .3s;}
+.bcard:hover{background:var(--b3);transform:translateY(-3px);}
+.bico{width:48px;height:48px;border:1px solid rgba(201,162,39,.15);border-radius:2px;display:flex;align-items:center;justify-content:center;margin-bottom:1.6rem;font-size:1.1rem;transition:border-color .3s;}
+.bcard:hover .bico{border-color:rgba(201,162,39,.4);}
+.btt{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;margin-bottom:.7rem;color:var(--cr);}
+.bdc{font-size:.87rem;font-weight:300;color:var(--mu);line-height:1.8;}
+
+/* SPECS */
+.spwrap{display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:center;}
+.splist{display:flex;flex-direction:column;}
+.sprow{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 0;border-bottom:1px solid rgba(255,255,255,.04);gap:1rem;}
+.spn{font-size:.82rem;font-weight:300;color:var(--mu);letter-spacing:.3px;min-width:130px;}
+.spbar{flex:1;height:1px;background:rgba(255,255,255,.05);}
+.spfill{height:1px;background:linear-gradient(90deg,var(--gd),var(--g));width:0%;transition:width 1.4s cubic-bezier(.4,0,.2,1);}
+.spv{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--g);min-width:110px;text-align:right;}
+.spvis{display:flex;flex-direction:column;align-items:center;gap:2rem;}
+.spring{width:270px;height:270px;border-radius:50%;border:1px solid rgba(201,162,39,.1);display:flex;align-items:center;justify-content:center;position:relative;}
+.spring::before{content:'';position:absolute;inset:20px;border-radius:50%;border:1px solid rgba(201,162,39,.05);}
+.spcent{text-align:center;z-index:1;}
+.spcv{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:var(--g);font-style:italic;}
+.spcl{font-size:.6rem;letter-spacing:3px;color:var(--mu);text-transform:uppercase;margin-top:.4rem;}
+.certs{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;}
+.cert{border:1px solid rgba(201,162,39,.14);padding:.38rem .9rem;font-size:.62rem;letter-spacing:1.5px;color:var(--g);text-transform:uppercase;transition:border-color .2s,background .2s;}
+.cert:hover{border-color:var(--g);background:var(--gm);}
+
+/* USOS */
+.usowrap{background:var(--b2);border-top:1px solid rgba(201,162,39,.06);border-bottom:1px solid rgba(201,162,39,.06);}
+.usosec{padding:8rem 5rem;max-width:1300px;margin:0 auto;}
+.usogrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem;}
+.ucard{border:1px solid rgba(201,162,39,.08);padding:2.8rem 2.4rem;position:relative;overflow:hidden;transition:border-color .3s,transform .3s;cursor:default;}
+.ucard::before{content:'';position:absolute;bottom:-60px;right:-60px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,39,.06) 0%,transparent 70%);transition:opacity .4s;}
+.ucard:hover{border-color:rgba(201,162,39,.3);transform:translateY(-4px);}
+.ucard:hover::before{opacity:2;}
+.uico{font-size:2rem;margin-bottom:1.4rem;display:block;}
+.utt{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:600;color:var(--cr);margin-bottom:.8rem;}
+.udc{font-size:.88rem;color:var(--mu);line-height:1.75;font-weight:300;}
+.utag{display:inline-block;margin-top:1.2rem;font-size:.6rem;letter-spacing:2px;color:var(--g);text-transform:uppercase;border-bottom:1px solid rgba(201,162,39,.2);padding-bottom:2px;}
+
+/* CALC */
+.calcsec{padding:8rem 5rem;max-width:1300px;margin:0 auto;}
+.calcin{display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:center;}
+.cinps{display:flex;flex-direction:column;gap:2rem;margin:2.5rem 0;}
+.clabel{font-size:.6rem;font-weight:500;letter-spacing:3px;color:var(--mu);text-transform:uppercase;margin-bottom:.8rem;display:block;}
+.cslider{display:flex;align-items:center;gap:1.2rem;}
+.cslider input[type=range]{flex:1;-webkit-appearance:none;appearance:none;height:1px;background:rgba(201,162,39,.15);outline:none;cursor:pointer;border-radius:1px;}
+.cslider input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;background:var(--g);border-radius:50%;box-shadow:0 0 0 4px rgba(201,162,39,.15);}
+.cval{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--g);min-width:60px;text-align:right;}
+.cres{border:1px solid rgba(201,162,39,.12);padding:1.6rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem;background:rgba(201,162,39,.02);}
+.crl{font-size:.58rem;letter-spacing:2px;color:var(--mu);text-transform:uppercase;margin-bottom:.4rem;}
+.crv{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--g);}
+.cwa{display:flex;align-items:center;justify-content:center;gap:.6rem;background:var(--g);color:var(--bl);padding:.95rem 2rem;font-size:.88rem;font-weight:500;text-decoration:none;border-radius:1px;margin-top:1.5rem;letter-spacing:.4px;transition:background .2s,transform .15s,box-shadow .2s;}
+.cwa:hover{background:var(--gl);transform:translateY(-2px);box-shadow:0 10px 28px rgba(201,162,39,.28);}
+
+/* BAGS ANIM */
+.bvis{display:flex;flex-direction:column;align-items:center;gap:1.8rem;}
+.brow{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;min-height:95px;align-items:flex-end;}
+.bm{width:44px;height:66px;border-radius:4px;background:linear-gradient(155deg,#1c1c1c,#0e0e0e);border:1px solid #222;position:relative;overflow:hidden;transition:border-color .4s,box-shadow .4s;}
+.bm.full{border-color:rgba(201,162,39,.3);box-shadow:0 0 16px rgba(201,162,39,.06);}
+.bmf{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(201,162,39,.3),rgba(201,162,39,.07));transition:height .9s cubic-bezier(.4,0,.2,1);height:0%;}
+.bmg{position:absolute;bottom:5px;left:0;right:0;text-align:center;font-size:.3rem;font-weight:700;color:var(--g);letter-spacing:.5px;}
+.bnum{font-family:'Playfair Display',serif;font-size:4.5rem;font-weight:700;color:var(--g);text-align:center;line-height:1;}
+.bnl{font-size:.6rem;letter-spacing:3px;color:var(--mu);text-transform:uppercase;text-align:center;margin-top:.3rem;}
+.bpag{font-size:.7rem;color:var(--mu);margin-top:.5rem;font-style:italic;font-family:'Cormorant Garamond',serif;}
+
+/* POR QUÉ */
+.wgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(201,162,39,.05);}
+.wcard{background:var(--b2);padding:3rem;transition:background .3s;}
+.wcard:hover{background:var(--b3);}
+.wnum{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;color:rgba(201,162,39,.08);line-height:1;margin-bottom:1rem;}
+.wtt{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;color:var(--cr);margin-bottom:.7rem;}
+.wdc{font-size:.88rem;color:var(--mu);line-height:1.8;font-weight:300;}
+
+/* CONTACTO */
+.consec{text-align:center;padding:8rem 5rem;max-width:1300px;margin:0 auto;}
+.ccontact{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-top:3rem;}
+.ccard{display:flex;flex-direction:column;align-items:center;gap:.7rem;border:1px solid rgba(201,162,39,.1);padding:2rem 2.5rem;text-decoration:none;transition:border-color .3s,background .3s,transform .3s;min-width:180px;}
+.ccard:hover{border-color:rgba(201,162,39,.3);background:var(--gm);transform:translateY(-4px);}
+.ccico{font-size:1.5rem;}
+.cct{font-size:.6rem;letter-spacing:2.5px;color:var(--mu);text-transform:uppercase;}
+.ccv{font-family:'Playfair Display',serif;font-size:.95rem;color:var(--cr);font-weight:600;}
+.czone{display:flex;align-items:center;gap:.6rem;justify-content:center;margin-top:2.5rem;font-size:.72rem;color:var(--mu);letter-spacing:.5px;}
+.czone::before,.czone::after{content:'';flex:1;max-width:80px;height:1px;background:rgba(201,162,39,.1);}
+.cpago{display:flex;justify-content:center;gap:.8rem;margin-top:1.5rem;}
+.cpm{border:1px solid rgba(255,255,255,.06);padding:.3rem .8rem;font-size:.6rem;letter-spacing:1.5px;color:var(--mu2);text-transform:uppercase;}
+.chero{display:flex;flex-direction:column;align-items:center;gap:1.5rem;margin-top:4rem;}
+
+/* FOOTER */
+footer{background:var(--b2);border-top:1px solid rgba(201,162,39,.07);padding:5rem 5rem 2.5rem;}
+.ftop{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;padding-bottom:4rem;border-bottom:1px solid rgba(255,255,255,.04);}
+.fbrand{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--cr);}
+.fbrand em{color:var(--g);font-style:normal;}
+.ftag{font-family:'Cormorant Garamond',serif;font-size:.9rem;color:var(--mu);margin-top:.5rem;font-style:italic;line-height:1.5;}
+.fzone{font-size:.65rem;letter-spacing:1px;color:var(--mu2);margin-top:1rem;}
+.fcol h4{font-size:.58rem;letter-spacing:3.5px;color:var(--g);text-transform:uppercase;margin-bottom:1.4rem;}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:.8rem;}
+.fcol a{font-size:.85rem;color:var(--mu);text-decoration:none;font-weight:300;transition:color .2s;}
+.fcol a:hover{color:var(--cr);}
+.fbot{display:flex;justify-content:space-between;align-items:center;padding-top:2rem;flex-wrap:wrap;gap:1rem;}
+.fcp{font-size:.7rem;color:var(--mu2);}
+.fsoc{display:flex;gap:1.8rem;}
+.fsoc a{font-size:.7rem;color:var(--mu2);text-decoration:none;transition:color .2s;letter-spacing:.5px;}
+.fsoc a:hover{color:var(--g);}
+
+/* FLOAT */
+.waf{position:fixed;bottom:2rem;right:2rem;z-index:400;display:flex;align-items:center;gap:.6rem;background:var(--g);color:var(--bl);padding:.8rem 1.4rem;border-radius:1px;font-size:.82rem;font-weight:500;text-decoration:none;box-shadow:0 6px 25px rgba(201,162,39,.35);transition:transform .2s,box-shadow .2s,background .2s;letter-spacing:.3px;}
+.waf:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(201,162,39,.5);background:var(--gl);}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.4,0,.2,1),transform .75s cubic-bezier(.4,0,.2,1);}
+.rv.v{opacity:1;transform:none;}
+.rv2{opacity:0;transform:translateX(26px);transition:opacity .75s,transform .75s;}
+.rv2.v{opacity:1;transform:none;}
+.rvs{opacity:0;transform:scale(.96);transition:opacity .7s,transform .7s;}
+.rvs.v{opacity:1;transform:scale(1);}
+
+/* MOBILE */
+@media(max-width:960px){
+  nav,nav.on{padding:1rem 1.5rem;}
+  .nm{display:none;}
+  .nhb{display:flex;}
+  .hc{flex-direction:column;padding:7rem 1.5rem 3rem;text-align:center;}
+  .hey{justify-content:center;}
+  .hsub{max-width:100%;}
+  .hbtns{justify-content:center;}
+  .bw{width:220px;}
+  .b3d{width:190px;height:290px;}
+  .bprem{font-size:1.85rem;top:130px;}
+  .bbar{top:183px;}
+  .stbar{grid-template-columns:repeat(2,1fr);padding:2.5rem 1.5rem;}
+  .st:nth-child(2)::after,.st:nth-child(4)::after{display:none;}
+  .sec,.usosec,.calcsec,.consec{padding:5rem 1.5rem;}
+  .bgrid,.spwrap,.calcin,.wgrid,.usogrid,.ftop{grid-template-columns:1fr;}
+  .spwrap,.calcin{gap:3rem;}
+  .spring{width:200px;height:200px;}
+  .hbadge{justify-content:center;}
+  footer{padding:3.5rem 1.5rem 2rem;}
+  .waf{padding:.7rem 1.1rem;font-size:.78rem;}
+}
+</style>
+</head>
+<body>
+<div id="cd"></div>
+<div id="cr"></div>
+<div id="prog"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#inicio" class="nl">Agro<em>Nova</em></a>
+  <ul class="nm">
+    <li><a href="#beneficios">Beneficios</a></li>
+    <li><a href="#usos">Usos</a></li>
+    <li><a href="#specs">Especificaciones</a></li>
+    <li><a href="#calc">Calculadora</a></li>
+    <li><a href="https://wa.me/5491130680704?text=Hola!%20Quiero%20consultar%20sobre%20Agronova%20Fibra%20de%20Coco%20Premium" class="nwa" target="_blank">Consultar ahora</a></li>
+  </ul>
+  <div class="nhb" id="nhb"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <canvas id="pcanvas"></canvas>
+  <div class="hc">
+    <div class="ht">
+      <div class="hey">Origen Sri Lanka · Certificado · CABA</div>
+      <h1>La base de cada<br><em>gran cultivo</em></h1>
+      <p class="hsub">Fibra de coco 100% natural, lavada y bufferizada. El sustrato que los profesionales eligen cuando los resultados importan.</p>
+      <div class="hbtns">
+        <a href="https://wa.me/5491130680704?text=Hola!%20Quiero%20consultar%20sobre%20la%20Fibra%20de%20Coco%20Agronova%20Premium" class="btn-g" target="_blank">Consultar por WhatsApp</a>
+        <a href="#beneficios" class="btn-o">Ver el producto</a>
+      </div>
+      <div class="hbadge">
+        <div class="hbd"><span class="hbv">50 L</span><span class="hbl">Por bolsa</span></div>
+        <div class="hbd"><span class="hbv">EC&lt;0.6</span><span class="hbl">Conductividad</span></div>
+        <div class="hbd"><span class="hbv">4+</span><span class="hbl">Certificaciones</span></div>
+        <div class="hbd"><span class="hbv">CABA</span><span class="hbl">Entrega directa</span></div>
+      </div>
+    </div>
+    <div class="bw">
+      <div class="b3d" id="bag3d">
+        <div class="bb">
+          <div class="btop"></div>
+          <div class="bla">
+            <div class="blt">AGRONOVA <div class="bleaf"></div></div>
+            <span class="bsub">Fibra de Coco</span>
+          </div>
+          <div class="bprem">PREMIUM</div>
+          <div class="bbar"><span>Sustrato Profesional</span></div>
+          <div class="bspecs">
+            <div class="bspec"><span class="bsl">EC BAJA</span><span class="bsv">&lt;0.6</span></div>
+            <div class="bspec"><span class="bsl">pH</span><span class="bsv">5.5–6.5</span></div>
+            <div class="bspec"><span class="bsl">LAVADO</span><span class="bsv">+BUF</span></div>
+          </div>
+          <div class="bdiag"></div>
+          <div class="blit"><span class="bln">50</span><span class="bll">Litros</span></div>
+        </div>
+        <div class="bglow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="tinner" id="ticker">
+    <span class="titem">Fibra de Coco Premium</span><span class="titem">Origen Sri Lanka</span><span class="titem">Lavado y Bufferizado</span><span class="titem">EC menor a 0.6</span><span class="titem">pH 5.5 – 6.5</span><span class="titem">Certificado COA</span><span class="titem">Entrega en CABA</span><span class="titem">50 Litros por bolsa</span><span class="titem">Uso Profesional</span><span class="titem">Fibra de Coco Premium</span><span class="titem">Origen Sri Lanka</span><span class="titem">Lavado y Bufferizado</span><span class="titem">EC menor a 0.6</span><span class="titem">pH 5.5 – 6.5</span><span class="titem">Certificado COA</span><span class="titem">Entrega en CABA</span><span class="titem">50 Litros por bolsa</span><span class="titem">Uso Profesional</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stbar">
+  <div class="st rv"><span class="stn" data-t="50" data-s="L">0</span><span class="stl">Litros por bolsa</span></div>
+  <div class="st rv" style="transition-delay:.1s"><span class="stn" data-t="100" data-s="%">0</span><span class="stl">Natural · Sri Lanka</span></div>
+  <div class="st rv" style="transition-delay:.2s"><span class="stn" data-t="4" data-s="+">0</span><span class="stl">Certificaciones</span></div>
+  <div class="st rv" style="transition-delay:.3s"><span class="stn">0.6</span><span class="stl">EC máxima garantizada</span></div>
+</div>
+
+<!-- BENEFICIOS -->
+<section class="sec" id="beneficios">
+  <div class="ey rv">Características del producto</div>
+  <h2 class="rv" style="transition-delay:.08s">Diseñado para<br><em>resultados reales</em></h2>
+  <p class="sub rv" style="transition-delay:.14s">Cada detalle fue pensado para maximizar el rendimiento de tus cultivos desde el primer día.</p>
+  <div class="bgrid">
+    <div class="bcard rv"><div class="bico">⚡</div><div class="btt">EC Ultra Baja</div><p class="bdc">Con EC menor a 0.6 mS/cm, las raíces absorben nutrientes de forma inmediata sin estrés salino ni pérdida de rendimiento.</p></div>
+    <div class="bcard rv" style="transition-delay:.07s"><div class="bico">⚗️</div><div class="btt">pH Estabilizado</div><p class="bdc">pH entre 5.5 y 6.5. El rango ideal para que las plantas accedan a todos los nutrientes disponibles en cada fase.</p></div>
+    <div class="bcard rv" style="transition-delay:.14s"><div class="bico">💧</div><div class="btt">Lavado y Bufferizado</div><p class="bdc">Sin sales residuales. Listo para usar desde la apertura de bolsa. Sin tratamientos previos, sin tiempos de espera.</p></div>
+    <div class="bcard rv" style="transition-delay:.05s"><div class="bico">🏆</div><div class="btt">Origen Certificado</div><p class="bdc">Importado de Sri Lanka con COA por lote, Certificado Fitosanitario, de Origen y de Fumigación incluidos.</p></div>
+    <div class="bcard rv" style="transition-delay:.12s"><div class="bico">🌿</div><div class="btt">Composición Óptima</div><p class="bdc">80% fibra fina + 20% chips de coco (6–20 mm). Balance perfecto entre retención de humedad y aireación radicular.</p></div>
+    <div class="bcard rv" style="transition-delay:.19s"><div class="bico">🛡️</div><div class="btt">Libre de Patógenos</div><p class="bdc">Proceso que elimina hongos, bacterias y organismos dañinos. Protege el desarrollo radicular desde el inicio.</p></div>
+  </div>
+</section>
+
+<!-- USOS -->
+<div class="usowrap" id="usos">
+  <div class="usosec">
+    <div class="ey rv">Aplicaciones</div>
+    <h2 class="rv" style="transition-delay:.08s">Para cada tipo<br>de <em>cultivo</em></h2>
+    <p class="sub rv" style="transition-delay:.14s;margin-bottom:0;">Un sustrato premium versátil, diseñado para rendir al máximo en cualquier entorno productivo.</p>
+    <div class="usogrid">
+      <div class="ucard rv">
+        <span class="uico">🌱</span>
+        <div class="utt">Horticultura</div>
+        <p class="udc">Tomates, lechugas, pimientos y todo tipo de vegetales de alta rotación. Retención de humedad uniforme que reduce el estrés hídrico y mejora los ciclos.</p>
+        <span class="utag">Vegetales · Frutales · Hierbas</span>
+      </div>
+      <div class="ucard rv" style="transition-delay:.1s">
+        <span class="uico">🪴</span>
+        <div class="utt">Viveros y Ornamentales</div>
+        <p class="udc">Flores, plantas ornamentales y trasplantes delicados. La ligereza del sustrato y su baja EC permiten establecimiento rápido sin quemar raíces nuevas.</p>
+        <span class="utag">Flores · Ornamentales · Trasplantes</span>
+      </div>
+      <div class="ucard rv" style="transition-delay:.2s">
+        <span class="uico">💡</span>
+        <div class="utt">Cultivo Intensivo Indoor</div>
+        <p class="udc">Para sistemas de alto rendimiento bajo condiciones controladas. La estabilidad del pH y la ausencia de sales garantizan nutrición precisa en cada ciclo.</p>
+        <span class="utag">Indoor · Hidropónico · Alto rendimiento</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SPECS -->
+<section class="sec" id="specs">
+  <div class="spwrap">
+    <div>
+      <div class="ey rv">Ficha técnica</div>
+      <h2 class="rv" style="transition-delay:.08s">Números que<br><em>respaldan</em></h2>
+      <p class="sub rv" style="transition-delay:.14s;margin-bottom:2.5rem;">Cada lote es analizado y certificado antes del despacho. Sin sorpresas.</p>
+      <div class="splist" id="splist">
+        <div class="sprow rv"><span class="spn">EC</span><div class="spbar"><div class="spfill"></div></div><span class="spv">&lt;0.6 mS/cm</span></div>
+        <div class="sprow rv" style="transition-delay:.04s"><span class="spn">pH</span><div class="spbar"><div class="spfill"></div></div><span class="spv">5.5 – 6.5</span></div>
+        <div class="sprow rv" style="transition-delay:.08s"><span class="spn">Sodio (Na)</span><div class="spbar"><div class="spfill"></div></div><span class="spv">&lt;50 ppm</span></div>
+        <div class="sprow rv" style="transition-delay:.12s"><span class="spn">Cloruros (Cl)</span><div class="spbar"><div class="spfill"></div></div><span class="spv">&lt;100 ppm</span></div>
+        <div class="sprow rv" style="transition-delay:.16s"><span class="spn">Humedad</span><div class="spbar"><div class="spfill"></div></div><span class="spv">15 – 20%</span></div>
+        <div class="sprow rv" style="transition-delay:.2s"><span class="spn">Fibra de coco</span><div class="spbar"><div class="spfill"></div></div><span class="spv">80%</span></div>
+        <div class="sprow rv" style="transition-delay:.24s"><span class="spn">Chips (6–20mm)</span><div class="spbar"><div class="spfill"></div></div><span class="spv">20%</span></div>
+        <div class="sprow rv" style="transition-delay:.28s"><span class="spn">Peso por bolsa</span><div class="spbar"><div class="spfill"></div></div><span class="spv">9 – 10 kg</span></div>
+      </div>
+    </div>
+    <div class="spvis rv2">
+      <div class="spring">
+        <div class="spcent">
+          <div class="spcv">Sri Lanka</div>
+          <div class="spcl">Origen certificado</div>
+        </div>
+      </div>
+      <div class="certs">
+        <div class="cert">COA por lote</div>
+        <div class="cert">Fitosanitario</div>
+        <div class="cert">Origen</div>
+        <div class="cert">Fumigación</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULADORA -->
+<section class="calcsec" id="calc" style="background:var(--b2);max-width:100%;padding:8rem 0;border-top:1px solid rgba(201,162,39,.06);border-bottom:1px solid rgba(201,162,39,.06);">
+  <div style="max-width:1300px;margin:0 auto;padding:0 5rem;">
+  <div class="calcin">
+    <div>
+      <div class="ey rv">Calculadora</div>
+      <h2 class="rv" style="transition-delay:.08s">¿Cuántas bolsas<br><em>necesitás?</em></h2>
+      <p class="sub rv" style="transition-delay:.14s;margin-bottom:0;">Ingresá las medidas de tu área de cultivo y te calculamos el pedido exacto.</p>
+      <div class="cinps">
+        <div class="rv" style="transition-delay:.1s">
+          <label class="clabel">Largo (metros)</label>
+          <div class="cslider"><input type="range" id="sl" min="0.5" max="25" step="0.5" value="2"><span class="cval" id="vl">2 m</span></div>
+        </div>
+        <div class="rv" style="transition-delay:.18s">
+          <label class="clabel">Ancho (metros)</label>
+          <div class="cslider"><input type="range" id="sa" min="0.5" max="25" step="0.5" value="2"><span class="cval" id="va">2 m</span></div>
+        </div>
+        <div class="rv" style="transition-delay:.26s">
+          <label class="clabel">Profundidad (cm)</label>
+          <div class="cslider"><input type="range" id="sp" min="5" max="60" step="1" value="20"><span class="cval" id="vp">20 cm</span></div>
+        </div>
+      </div>
+      <div class="cres rv" style="transition-delay:.3s">
+        <div><div class="crl">Bolsas necesarias</div><div class="crv" id="cbags">1</div></div>
+        <div><div class="crl">Total en litros</div><div class="crv" id="clits">80 L</div></div>
+      </div>
+      <a href="#" class="cwa rv" id="cwalink" style="transition-delay:.36s" target="_blank">Hacer pedido por WhatsApp →</a>
+    </div>
+    <div class="bvis rv" style="transition-delay:.2s">
+      <div class="brow" id="brow"></div>
+      <div class="bnum" id="bnum">1</div>
+      <div class="bnl">bolsa<span id="bpl"></span> de 50L</div>
+      <div class="bpag" id="bpag"></div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- POR QUÉ -->
+<section class="sec" id="porq">
+  <div class="ey rv">Nuestra diferencia</div>
+  <h2 class="rv" style="transition-delay:.08s">Por qué los profesionales<br>eligen <em>Agronova</em></h2>
+  <p class="sub rv" style="transition-delay:.14s;margin-bottom:3rem;">No es solo un sustrato. Es la base de cada resultado del que te vas a enorgullecer.</p>
+  <div class="wgrid">
+    <div class="wcard rv"><div class="wnum">01</div><div class="wtt">Certificaciones reales por lote</div><p class="wdc">COA, Fitosanitario, Origen y Fumigación. Transparencia total. Cada bolsa llega con el respaldo de análisis independientes.</p></div>
+    <div class="wcard rv" style="transition-delay:.1s"><div class="wnum">02</div><div class="wtt">Listo para usar desde el día uno</div><p class="wdc">Lavado y bufferizado de fábrica. Sin trabajo previo, sin ajuste de pH, sin sorpresas. Abrís la bolsa y plantás.</p></div>
+    <div class="wcard rv" style="transition-delay:.05s"><div class="wnum">03</div><div class="wtt">Consistencia lote a lote garantizada</div><p class="wdc">Cada envío es analizado antes del despacho. Los valores de pH, EC y humedad son constantes en cada bolsa que recibís.</p></div>
+    <div class="wcard rv" style="transition-delay:.15s"><div class="wnum">04</div><div class="wtt">Entrega directa en CABA</div><p class="wdc">Coordinamos el envío directo a tu local, vivero o domicilio en Capital Federal. Sin intermediarios, sin demoras innecesarias.</p></div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="consec" id="contacto" style="border-top:1px solid rgba(201,162,39,.06);">
+  <div class="ey rv" style="justify-content:center;">Contacto</div>
+  <h2 class="rv" style="transition-delay:.08s">¿Listo para el próximo<br><em>nivel?</em></h2>
+  <p class="sub rv" style="margin:0 auto 0;text-align:center;transition-delay:.14s;">Escribinos y te asesoramos al toque. Respondemos rápido.</p>
+  <div class="ccontact rv" style="transition-delay:.2s">
+    <a href="https://wa.me/5491130680704?text=Hola!%20Quiero%20consultar%20sobre%20la%20Fibra%20de%20Coco%20Agronova%20Premium" class="ccard" target="_blank">
+      <div class="ccico">💬</div>
+      <div class="cct">WhatsApp</div>
+      <div class="ccv">+54 9 11 3068-0704</div>
+    </a>
+    <a href="https://instagram.com/agronova.ar" class="ccard" target="_blank">
+      <div class="ccico">📸</div>
+      <div class="cct">Instagram</div>
+      <div class="ccv">@agronova.ar</div>
+    </a>
+    <a href="mailto:agronova.ba@gmail.com" class="ccard">
+      <div class="ccico">✉️</div>
+      <div class="cct">Email</div>
+      <div class="ccv">agronova.ba@gmail.com</div>
+    </a>
+  </div>
+  <div class="czone rv" style="transition-delay:.28s">📍 Entrega en CABA · Capital Federal · Buenos Aires</div>
+  <div class="cpago rv" style="transition-delay:.32s">
+    <div class="cpm">Mercado Pago</div>
+    <div class="cpm">Transferencia Bancaria</div>
+  </div>
+  <div class="chero rv" style="transition-delay:.38s">
+    <a href="https://wa.me/5491130680704?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20Fibra%20de%20Coco%20Agronova" class="btn-g" target="_blank" style="font-size:.95rem;padding:1.1rem 3rem;">Hacer mi pedido ahora</a>
+    <p style="font-size:.75rem;color:var(--mu);font-style:italic;font-family:'Cormorant Garamond',serif;">Consultá también sobre precios mayoristas para volumen</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ftop">
+    <div>
+      <div class="fbrand">Agro<em>Nova</em></div>
+      <div class="ftag">Premium desde la raíz.<br>Buenos Aires, Argentina.</div>
+      <div class="fzone">📍 Entrega en CABA · Capital Federal</div>
+    </div>
+    <div class="fcol"><h4>Producto</h4><ul><li><a href="#beneficios">Beneficios</a></li><li><a href="#usos">Aplicaciones</a></li><li><a href="#specs">Especificaciones</a></li><li><a href="#calc">Calculadora</a></li></ul></div>
+    <div class="fcol"><h4>Empresa</h4><ul><li><a href="#porq">Por qué Agronova</a></li><li><a href="#contacto">Contacto</a></li></ul></div>
+    <div class="fcol"><h4>Contacto</h4><ul><li><a href="https://wa.me/5491130680704" target="_blank">WhatsApp</a></li><li><a href="https://instagram.com/agronova.ar" target="_blank">Instagram</a></li><li><a href="mailto:agronova.ba@gmail.com">Email</a></li></ul></div>
+  </div>
+  <div class="fbot">
+    <div class="fcp">© 2025 Agronova · Buenos Aires, Argentina · Todos los derechos reservados</div>
+    <div class="fsoc"><a href="https://instagram.com/agronova.ar" target="_blank">Instagram</a><a href="https://wa.me/5491130680704" target="_blank">WhatsApp</a><a href="mailto:agronova.ba@gmail.com">Email</a></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5491130680704?text=Hola!%20Quiero%20consultar%20sobre%20Agronova" class="waf" target="_blank">💬 Consultar</a>
+
+<script>
+// CURSOR
+const cd=document.getElementById('cd'),cr2=document.getElementById('cr');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cd.style.left=mx+'px';cd.style.top=my+'px';});
+(function animC(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;cr2.style.left=Math.round(rx)+'px';cr2.style.top=Math.round(ry)+'px';requestAnimationFrame(animC);})();
+document.querySelectorAll('a,button,input[type=range],.bcard,.wcard,.ucard,.ccard').forEach(el=>{el.addEventListener('mouseenter',()=>cr2.classList.add('h'));el.addEventListener('mouseleave',()=>cr2.classList.remove('h'));});
+
+// PROGRESS + NAV
+const prog=document.getElementById('prog'),nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{prog.style.width=(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)+'%';nav.classList.toggle('on',window.scrollY>60);});
+
+// PARTICLES
+const cv=document.getElementById('pcanvas'),ctx=cv.getContext('2d');
+let W,H,pts=[];
+const rsz=()=>{W=cv.width=window.innerWidth;H=cv.height=window.innerHeight;};
+rsz();window.addEventListener('resize',rsz);
+const mkp=()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.2+.2,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18,a:Math.random()*.35+.04,c:Math.random()>.55?'201,162,39':'245,241,232'});
+for(let i=0;i<90;i++)pts.push(mkp());
+(function draw(){ctx.clearRect(0,0,W,H);pts.forEach(p=>{ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(${p.c},${p.a})`;ctx.fill();p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;});requestAnimationFrame(draw);})();
+
+// BAG 3D
+const bag=document.getElementById('bag3d'),bwrap=bag.parentElement;
+bwrap.addEventListener('mousemove',e=>{const r=bwrap.getBoundingClientRect();const dx=(e.clientX-r.left-r.width/2)/(r.width/2),dy=(e.clientY-r.top-r.height/2)/(r.height/2);bag.style.transition='transform .06s';bag.style.transform=`rotateY(${dx*22}deg) rotateX(${-dy*15}deg) scale(1.05)`;});
+bwrap.addEventListener('mouseleave',()=>{bag.style.transition='transform .8s ease';bag.style.transform='rotateY(0) rotateX(0) scale(1)';});
+
+// SCROLL REVEAL
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v');});},{threshold:.1,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.rv,.rv2,.rvs').forEach(el=>obs.observe(el));
+
+// SPEC BARS
+const spobs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.spfill').forEach((f,i)=>setTimeout(()=>f.style.width=(65+Math.random()*28)+'%',i*85));}});},{threshold:.25});
+const spel=document.getElementById('splist');if(spel)spobs.observe(spel);
+
+// COUNTERS
+const cobs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.stn[data-t]').forEach(el=>{const t=parseFloat(el.dataset.t),s=el.dataset.s||'';let c=0;const iv=setInterval(()=>{c=Math.min(c+t/45,t);el.textContent=Math.round(c)+s;if(c>=t)clearInterval(iv);},16);});cobs.unobserve(e.target);}});},{threshold:.4});
+const sb=document.querySelector('.stbar');if(sb)cobs.observe(sb);
+
+// CALCULADORA
+const sl=document.getElementById('sl'),sa=document.getElementById('sa'),sp2=document.getElementById('sp');
+const vl=document.getElementById('vl'),va=document.getElementById('va'),vp=document.getElementById('vp');
+const cbags=document.getElementById('cbags'),clits=document.getElementById('clits'),bnum=document.getElementById('bnum'),bpl=document.getElementById('bpl'),brow=document.getElementById('brow'),cwalink=document.getElementById('cwalink'),bpag=document.getElementById('bpag');
+function upCalc(){
+  const L=parseFloat(sl.value),A=parseFloat(sa.value),P=parseFloat(sp2.value);
+  vl.textContent=L+' m';va.textContent=A+' m';vp.textContent=P+' cm';
+  const liters=L*A*(P/100)*1000;
+  const bags=Math.ceil(liters/50);
+  cbags.textContent=bags;
+  clits.textContent=Math.round(liters)+' L';
+  bnum.textContent=bags;
+  bpl.textContent=bags!==1?'s':'';
+  bpag.textContent=bags>1?`${bags} bolsas · ${Math.round(bags*9.5)} kg aprox`:'';
+  cwalink.href=`https://wa.me/5491130680704?text=Hola!%20Necesito%20${bags}%20bolsa${bags!==1?'s':''}%20de%20Fibra%20de%20Coco%20Agronova%20para%20un%20cultivo%20de%20${L}x${A}m%20(${Math.round(liters)}L%20aprox).%20%C2%BFPod%C3%A9s%20asesorarme%3F`;
+  brow.innerHTML='';
+  const show=Math.min(bags,20);
+  for(let i=0;i<show;i++){
+    const bm=document.createElement('div');bm.className='bm';
+    const bf=document.createElement('div');bf.className='bmf';
+    const bg=document.createElement('div');bg.className='bmg';bg.textContent='50L';
+    bm.append(bf,bg);brow.append(bm);
+    setTimeout(()=>{bm.classList.add('full');bf.style.height='90%';},i*45+80);
+  }
+  if(bags>20){const m=document.createElement('div');m.style.cssText='color:var(--mu);font-size:.72rem;letter-spacing:1px;padding:.5rem;align-self:center;font-family:"Playfair Display",serif;';m.textContent=`+${bags-20}`;brow.append(m);}
+}
+[sl,sa,sp2].forEach(s=>s.addEventListener('input',upCalc));
+upCalc();
+</script>
+</body>
+</html>
